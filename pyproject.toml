@@ -8,6 +8,7 @@ requires-python = ">=3.13"
 dependencies = [
     "flet==0.86.2",
     "flet-video==0.86.2",
+    "flet-permission-handler==0.86.2",
 ]
 
 [tool.flet]
@@ -18,7 +19,6 @@ company = "Zydisk"
 [tool.flet.android]
 split_per_abi = false
 
-permissions = [
-    "android.permission.READ_EXTERNAL_STORAGE",
-    "android.permission.WRITE_EXTERNAL_STORAGE"
-]
+[tool.flet.android.permission]
+"android.permission.READ_EXTERNAL_STORAGE" = true
+"android.permission.WRITE_EXTERNAL_STORAGE" = true
